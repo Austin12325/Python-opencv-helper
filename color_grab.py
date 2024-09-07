@@ -1,5 +1,4 @@
 import pyMeow as pm
-import pyperclip
 from time import sleep
 
 
@@ -44,7 +43,6 @@ while pm.overlay_loop():
                     end_pos.append(mousey)
                     
                     print(f'Boundry: frame[{round(start_pos[1]*0.666666)}:{round(end_pos[1]*0.666666)},{round(start_pos[0]*0.666666)}:{round(end_pos[0]*0.666666)}]')
-                    pyperclip.copy(f'frame[{round(start_pos[1]*0.666666)}:{round(end_pos[1]*0.666666)},{round(start_pos[0]*0.666666)}:{round(end_pos[0]*0.666666)}]')
                     start_pos.clear()
                     end_pos.clear()
 
@@ -54,7 +52,6 @@ while pm.overlay_loop():
                 # print(color['r']+color['g']+color['b'])
                 loc = f'[{round(mousey*0.666666)},{round(mousex*0.666666)}] {sumcolor}'
                 print(f'Pixel Color: {loc}')
-                pyperclip.copy(loc)
                 sleep(0.2)
 
     pm.end_drawing()                                        
